@@ -1,4 +1,4 @@
-name,items,craftingTime,craftNum,ResourceType,ingredient0,ingredient1,ingredient2,ingredient3,ingredient4,ingredient5,ingredient6,ingredient7
+name,supported_items,craftingTime,craftNum,ResourceType,ingredient0,ingredient1,ingredient2,ingredient3,ingredient4,ingredient5,ingredient6,ingredient7
 speed-module,speed-module,15,1,regular,red-circuit:5,green-circuit:5,,,,,,
 speed-module-2,speed-module-2,30,1,regular,speed-module:4,red-circuit:5,blue-circuit:5,,,,,
 speed-module-3,speed-module-3,60,1,regular,speed-module-2:4,red-circuit:5,blue-circuit:5,,,,,

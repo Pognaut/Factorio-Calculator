@@ -1,4 +1,5 @@
 # Factorio-Calculator
 
-Must have items file in folder w/ exe
-Excel file must be in folder w/ exe to write and must be a .xlsx
+This code is kind of awful but it works. It is sort of unreadable and is very complicated in dealing with information.
+There is more information on how the program works in the py file.
+Feel free to take and copy my code. I don't care if im credited but id love to know what its used for.

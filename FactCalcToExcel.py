@@ -4,6 +4,75 @@ from typing import LiteralString
 import pandas as pd
 from io import StringIO
 
+'''
+Program Structure:
+imports
+defs   
+script
+    read csv and store
+    get file name, assembler type, and smelter type
+    start loop
+    get item and format input
+    check if supported
+    get number per second
+    run num_assem on item
+    run ingredients
+    run recursive loop on ingredients
+    run total print out
+    format string data
+    format to dataframe
+    write to excel
+    back to start of loop or end script
+
+Imports/Dependencies:
+    math
+    pandas (and its dependencies)
+    scipy (io module)
+    et_xmlfile
+    openpyxl
+
+Defs/Funcs:
+num_assem:
+    Finds the number of assemblers needed to craft the needed items adds this to dictionary and data for excel. Called in recursive_loop
+
+num_smelt:
+    Finds the number of smelters needed to craft the needed items adds this to dictionary and data for excel. Called in recursive_loop
+
+num_refine:
+    Finds the number of oil refineries needed to craft the needed items adds this to dictionary and data for excel. Called in recursive_loop
+
+num_chem:
+    Finds the number of chemical plants needed to craft the needed items adds this to dictionary and data for excel. Called in recursive_loop
+
+ingreds:
+    gets ingredients from csv dataframe. Called in recursive_loop
+    
+recursive_loop:
+    checks item type and will go through all ingredients of original item and log information and add to excel data.
+
+type_test:
+    returns item/resource type.
+
+total_print_out:
+    prints items per second and crafters need for ingredients/items and total crafters.
+
+dict_add:
+    adds input to dictionary or adds value to existing value. Called in num_crafters, recursive_loop
+
+item_logger:
+    tracks all items needed to craft original item. Called in recursive_loop
+
+frame_add:
+    adds input to new line and at correct column to excel data. Called in num_crafters, recursive_loop
+
+frame_next:
+    adds input to next cell in excel data. Called in num_crafters, recursive_loop
+
+If you find bugs or issues with anything let me know via github
+URL:https://github.com/Pognaut/Factorio-Calculator
+
+-Pognaut
+'''
 
 def num_assem(items, number_sec, cat, depth, level):
    assems = math.ceil(number_sec / (float(df.at[items,'craftNum']) / float(df.at[items,'craftingTime'] / level)))  #items / (craftime/numcrafted) rounded up
